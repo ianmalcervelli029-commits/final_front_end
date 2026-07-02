@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo de productos TechFix - Computadoras, notebooks, componentes y periféricos.">
+  <meta name="keywords" content="computadoras, notebooks, SSD, RAM, monitor, periféricos">
+  <meta name="author" content="TechFix">
+  <title>Productos - TechFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">⚙️ TechFix</div>
+      <nav>
+        <ul class="nav-lista">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#resenias">Reseñas</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrito" id="btnCarrito">
+        🛒 <span id="contadorCarrito">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PANEL CARRITO -->
+  <div class="carrito-panel" id="carritoPanel">
+    <div class="carrito-cabecera">
+      <h2>🛒 Tu Carrito</h2>
+      <button id="cerrarCarrito">✕</button>
+    </div>
+    <div class="carrito-lista" id="carritoLista">
+      <p class="carrito-vacio">Tu carrito está vacío</p>
+    </div>
+    <div class="carrito-pie">
+      <p>Total: <strong id="carritoTotal">$0</strong></p>
+      <button class="btn-comprar" id="btnComprar">Finalizar compra</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <h2>Catálogo de Productos</h2>
+      <p>Computadoras, notebooks, componentes y periféricos al mejor precio</p>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filtros-seccion">
+      <div class="filtros">
+        <button class="filtro activo" data-cat="todos">Todos</button>
+        <button class="filtro" data-cat="Computadoras">Computadoras</button>
+        <button class="filtro" data-cat="Notebooks">Notebooks</button>
+        <button class="filtro" data-cat="Monitores">Monitores</button>
+        <button class="filtro" data-cat="Componentes">Componentes</button>
+        <button class="filtro" data-cat="Periféricos">Periféricos</button>
+      </div>
+    </section>
+
+    <!-- LISTADO -->
+    <section class="seccion">
+      <h2 class="titulo-seccion">Nuestros Productos</h2>
+      <div class="productos-grid" id="productosContainer"></div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="seccion seccion-oscura">
+      <h2 class="titulo-seccion">Conocé nuestro taller</h2>
+      <div class="video-wrapper">
+        <iframe
+          width="100%" height="420"
+          src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+          title="Video institucional TechFix"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-col">
+        <h3>TechFix</h3>
+        <p>Venta y servicio técnico de computadoras y notebooks.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>📍 Av. Rivadavia 4500, Merlo</p>
+        <p>📞 +54 11 4500-1234</p>
+        <p>✉️ info@techfix.com.ar</p>
+      </div>
+      <div class="footer-col">
+        <h3>Seguinos</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 TechFix | Todos los derechos reservados</p>
+  </footer>
+
+  <div class="notificacion" id="notificacion"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

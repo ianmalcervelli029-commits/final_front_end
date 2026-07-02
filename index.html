@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechFix - Venta, reparación y mantenimiento de computadoras y notebooks en Buenos Aires.">
+  <meta name="keywords" content="computadoras, notebooks, reparacion, servicio tecnico, Buenos Aires">
+  <meta name="author" content="TechFix">
+  <title>TechFix - Venta y Servicio Técnico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">⚙️ TechFix</div>
+      <nav>
+        <ul class="nav-lista">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#resenias">Reseñas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="btn-carrito" id="btnCarrito">
+        🛒 <span id="contadorCarrito">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PANEL CARRITO -->
+  <div class="carrito-panel" id="carritoPanel">
+    <div class="carrito-cabecera">
+      <h2>🛒 Tu Carrito</h2>
+      <button id="cerrarCarrito">✕</button>
+    </div>
+    <div class="carrito-lista" id="carritoLista">
+      <p class="carrito-vacio">Tu carrito está vacío</p>
+    </div>
+    <div class="carrito-pie">
+      <p>Total: <strong id="carritoTotal">$0</strong></p>
+      <button class="btn-comprar" id="btnComprar">Finalizar compra</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <h2>Tu equipo en las mejores manos</h2>
+        <p>Venta, reparación y mantenimiento de computadoras y notebooks en Buenos Aires</p>
+        <a href="productos.html" class="btn">Ver productos</a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="seccion" id="servicios">
+      <h2 class="titulo-seccion">Nuestros Servicios</h2>
+      <div class="cards-flex">
+
+        <article class="card">
+          <img src="img/tecnic.jfif" alt="Reparación de computadoras de escritorio">
+          <div class="card-cuerpo">
+            <h3>Reparación de PC</h3>
+            <p>Diagnóstico y reparación de cualquier falla en tu computadora de escritorio.</p>
+            <a href="#contacto">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/net1.jfif" alt="Service técnico de notebooks y laptops">
+          <div class="card-cuerpo">
+            <h3>Service de Notebooks</h3>
+            <p>Cambio de pantalla, teclado, batería y limpieza de pasta térmica.</p>
+            <a href="#contacto">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/bok2.jfif" alt="Mantenimiento preventivo de equipos">
+          <div class="card-cuerpo">
+            <h3>Mantenimiento Preventivo</h3>
+            <p>Limpieza interna, actualización de software y optimización del sistema.</p>
+            <a href="#contacto">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/up.jfif" alt="Upgrades y mejoras de hardware">
+          <div class="card-cuerpo">
+            <h3>Upgrades y Mejoras</h3>
+            <p>Ampliación de RAM, cambio a SSD y actualización de componentes.</p>
+            <a href="#contacto">Consultar →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="seccion seccion-oscura" id="productos">
+      <h2 class="titulo-seccion">Productos Destacados</h2>
+      <div class="productos-grid">
+
+        <article class="producto-card">
+          <img src="img/escrit1.jfif" alt="PC Gamer Ryzen 5">
+          <h3>PC Gamer Ryzen 5 / RTX 4060</h3>
+          <p>16GB RAM / 1TB SSD NVMe</p>
+          <span class="precio">$850.00</span>
+          <button class="btn-agregar" onclick="agregarAlCarrito(1,'PC Gamer Ryzen 5 / RTX 4060',850,'https://placehold.co/400x260/0f3460/e94560?text=PC+Gamer')">🛒 Agregar</button>
+        </article>
+
+        <article class="producto-card">
+          <img src="img/net1.jfif" alt="Notebook Lenovo IdeaPad">
+          <h3>Notebook Lenovo IdeaPad</h3>
+          <p>Ryzen 5 / 8GB / 512GB SSD</p>
+          <span class="precio">$620.00</span>
+          <button class="btn-agregar" onclick="agregarAlCarrito(4,'Notebook Lenovo IdeaPad',620,'https://placehold.co/400x260/0f3460/e94560?text=Notebook')">🛒 Agregar</button>
+        </article>
+
+        <article class="producto-card">
+          <img src="img/moni.jfif" alt="Monitor 27 pulgadas 144Hz">
+          <h3>Monitor 27" 144Hz IPS</h3>
+          <p>Full HD / FreeSync / 1ms</p>
+          <span class="precio">$310.00</span>
+          <button class="btn-agregar" onclick="agregarAlCarrito(7,'Monitor 27 pulgadas 144Hz',310,'https://placehold.co/400x260/0f3460/e94560?text=Monitor+27')">🛒 Agregar</button>
+        </article>
+
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="productos.html" class="btn">Ver todos los productos</a>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="seccion" id="resenias">
+      <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+      <div class="resenias-grid">
+
+        <article class="resenia">
+          <p>"Me arreglaron la notebook en 24 horas. Pensé que la tenía que tirar y quedó como nueva."</p>
+          <div class="resenia-autor">
+            <img src="https://placehold.co/60x60/1a1a2e/00d4ff?text=MG" alt="Foto de Martín González">
+            <div>
+              <strong>Martín González</strong>
+              <span>Cambio de pantalla</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="resenia">
+          <p>"Compré una PC armada y el precio fue muy competitivo. Me la configuraron completamente lista."</p>
+          <div class="resenia-autor">
+            <img src="https://placehold.co/60x60/1a1a2e/00d4ff?text=LP" alt="Foto de Laura Pereyra">
+            <div>
+              <strong>Laura Pereyra</strong>
+              <span>PC Gamer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="resenia">
+          <p>"Le hicieron mantenimiento a todas las computadoras de mi empresa. Trabajo impecable."</p>
+          <div class="resenia-autor">
+            <img src="https://placehold.co/60x60/1a1a2e/00d4ff?text=CR" alt="Foto de Carlos Romero">
+            <div>
+              <strong>Carlos Romero</strong>
+              <span>Cliente corporativo</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="resenia">
+          <p>"Cambié el disco a SSD y no lo puedo creer, arranca en segundos. Debería haberlo hecho antes."</p>
+          <div class="resenia-autor">
+            <img src="https://placehold.co/60x60/1a1a2e/00d4ff?text=AM" alt="Foto de Ana Martínez">
+            <div>
+              <strong>Ana Martínez</strong>
+              <span>Upgrade a SSD</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion seccion-oscura" id="contacto">
+      <h2 class="titulo-seccion">Contacto</h2>
+      <div class="contacto-contenedor">
+
+        <div class="contacto-info">
+          <h3>Encontranos</h3>
+          <p>📍 Av. Rivadavia 4500, Merlo, Buenos Aires</p>
+          <p>📞 +54 11 4500-1234</p>
+          <p>✉️ info@techfix.com.ar</p>
+          <p>🕐 Lun-Vie 9:00–18:00 | Sáb 9:00–13:00</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.018280197969!2d-58.38417712427235!3d-34.60369925749729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1777371559712"
+            width="100%" height="220" style="border:0;border-radius:8px;margin-top:1rem;"
+            allowfullscreen loading="lazy" title="Ubicación TechFix">
+          </iframe>
+        </div>
+
+        <div class="contacto-form">
+          <h3>Escribinos</h3>
+          <div id="formMensaje" class="form-mensaje"></div>
+          <form id="contactoForm" action="https://formspree.io/f/tu-id-formspree" method="POST" novalidate>
+            <div class="campo">
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+              <span class="error" id="errorNombre"></span>
+            </div>
+            <div class="campo">
+              <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+              <span class="error" id="errorEmail"></span>
+            </div>
+            <div class="campo">
+              <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+            </div>
+            <div class="campo">
+              <select name="servicio">
+                <option value="" disabled selected>¿Qué necesitás?</option>
+                <option value="reparacion">Reparación de PC</option>
+                <option value="notebook">Service de Notebook</option>
+                <option value="mantenimiento">Mantenimiento preventivo</option>
+                <option value="compra">Compra de equipo</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos tu consulta..." required></textarea>
+              <span class="error" id="errorMensaje"></span>
+            </div>
+            <button type="submit" id="btnEnviar" class="btn">Enviar mensaje</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-col">
+        <h3>TechFix</h3>
+        <p>Venta y servicio técnico de computadoras y notebooks. Más de 10 años en el rubro.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#resenias">Reseñas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>📍 Av. Rivadavia 4500, Merlo</p>
+        <p>📞 +54 11 4500-1234</p>
+        <p>✉️ info@techfix.com.ar</p>
+      </div>
+      <div class="footer-col">
+        <h3>Seguinos</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 TechFix | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- NOTIFICACION -->
+  <div class="notificacion" id="notificacion"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
